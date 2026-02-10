@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal Academic Profile Page">
+    <meta name="keywords" content="Student, Academic Profile, Education, Internship">
+    <meta name="author" content="MD Hozrat Ali Naeem">
+    <title>Lab Task 05</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>MD Hozrat Ali Naeem</h1>
+
+        <nav>
+            <a href="#bio">Biography</a> |
+            <a href="#education">Education</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section id="bio">
+            <h2>Biography</h2>
+            <p>
+                I am a Computer Science student at AIUB with strong interest in
+                programming and web development. I am looking for internship
+                opportunities to improve my professional skills.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <table border="1">
+                <caption><strong>Educational Background</strong></caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Degree</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Result</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>BSc in CSE</td>
+                        <td>AIUB</td>
+                        <td>2023 - Present</td>
+                        <td>CGPA 3.89</td>
+                    </tr>
+                    <tr>
+                        <td>HSC</td>
+                        <td>Ispahani Public School & College</td>
+                        <td>2021</td>
+                        <td>GPA 5.00</td>
+                    </tr>
+                    <tr>
+                        <td>SSC</td>
+                        <td>Ispahani Public School & College</td>
+                        <td>2029</td>
+                        <td>GPA 5.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form action="#" method="post">
+
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name"
+                       required maxlength="50">
+                <br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email"
+                       required maxlength="50">
+                <br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="01XXXXXXXXX"
+                       pattern="[0-9]{11}"
+                       maxlength="11">
+                <br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"
+                          placeholder="Write your message here..."
+                          required maxlength="200"
+                          rows="5" cols="40"></textarea>
+                <br><br>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Web Technologies Lab</p>
+        <p>MD Hozrat Ali Naeem 23-54595-3</p>
+    </footer>
+
+</body>
+</html>
