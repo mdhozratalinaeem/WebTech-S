@@ -1,0 +1,56 @@
+
+h1, h2 {
+    text-align: center;
+    color: darkblue;
+    font-size: 2rem;   
+}
+
+
+.absolute-box {
+    width: 300px;    
+    height: 5cm;         
+    background-color: lightblue;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.relative-box {
+    width: 50%;      
+    height: 30vh;   
+    background-color: lightgreen;
+    margin: 2em;        
+    padding: 1rem;      
+    font-size: 1.2em;   
+}
+
+
+div p {
+    color: purple;
+    font-weight: bold;
+}
+
+
+input[type="text"] {
+    border: 2px solid blue;
+    padding: 10px;
+    width: 40vw;   
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+}
+
+button:active {
+    background-color: red;
+}
+
+input:focus {
+    background-color:darkslategray ;
+    outline: none;
+}
+
+a:hover {
+    color: red;
+}

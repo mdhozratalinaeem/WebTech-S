@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Task 01 - Introduction to CSS</title>
+
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            color: darkblue;
+            font-size: 18px;
+        }
+
+        #mainTitle {
+            text-align: center;
+            color: darkred;
+            font-size: 32px;
+        }
+        .highlight {
+            background-color: blue;
+            color: black;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 id="mainTitle" style="background-color: lightgray;">
+        Introduction to CSS
+    </h1>
+
+    <p>This paragraph is styled using element selector.</p>
+
+    <p class="highlight">
+        This paragraph uses class selector (.highlight).
+    </p>
+
+    <h2>External CSS Example</h2>
+
+    <div class="box">
+        This box is styled using external CSS.
+    </div>
+
+</body>
+</html>
