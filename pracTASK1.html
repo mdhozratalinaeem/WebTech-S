@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Task 01 - JavaScript Basics</title>
+</head>
+<body>
+
+    <h1>JavaScript Basics and User Interaction</h1>
+    <div id="output"></div>
+
+    <script>
+        alert("Welcome to JavaScript Lab Task!");
+
+        console.log("Welcome message printed in console.");
+
+        document.write("<p>Welcome message printed using document.write()</p>");
+
+        var studentName = "Naeem";
+        var studentAge = 21;
+
+        var nextYearAge = studentAge + 1;  
+        var message = "Student Name: " + studentName;
+
+        document.getElementById("output").innerHTML += 
+            "<p>" + message + "</p>" +
+            "<p>Current Age: " + studentAge + "</p>" +
+            "<p>Next Year Age: " + nextYearAge + "</p>";
+
+        var num1 = prompt("Enter first number:");
+        var num2 = prompt("Enter second number:");
+
+        num1 = Number(num1);
+        num2 = Number(num2);
+
+        var sum = num1 + num2;
+        var difference = num1 - num2;
+        var product = num1 * num2;
+
+        document.getElementById("output").innerHTML += 
+            "<h3>Calculation Results</h3>" +
+            "<p>Sum: " + sum + "</p>" +
+            "<p>Difference: " + difference + "</p>" +
+            "<p>Product: " + product + "</p>";
+
+        if (num1 % 2 === 0) {
+            document.getElementById("output").innerHTML += 
+                "<p>" + num1 + " is Even</p>";
+        } else {
+            document.getElementById("output").innerHTML += 
+                "<p>" + num1 + " is Odd</p>";
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Arrays and Objects Lab</title>
+</head>
+<body>
+
+    <h1>JavaScript Arrays and Objects</h1>
+    <div id="output"></div>
+
+    <script>
+        var output = document.getElementById("output");
+
+
+        var courses = ["OOP", "Data Structures", "Database", "Web Tech", "AI"];
+
+        output.innerHTML += "<h2>Course List (Using For Loop)</h2>";
+
+        for (var i = 0; i < courses.length; i++) {
+            output.innerHTML += "<p>" + courses[i] + "</p>";
+        }
+
+        // Add new course
+        courses.push("Operating Systems");
+
+        output.innerHTML += "<h3>After Adding New Course:</h3>";
+
+        for (var i = 0; i < courses.length; i++) {
+            output.innerHTML += "<p>" + courses[i] + "</p>";
+        }
+        output.innerHTML += "<h2>Array Operations</h2>";
+
+        output.innerHTML += "<p>Array Length: " + courses.length + "</p>";
+
+        var removedCourse = courses.pop();
+        output.innerHTML += "<p>Removed Last Course: " + removedCourse + "</p>";
+
+        courses.unshift("Computer Networks");
+
+        output.innerHTML += "<p>After unshift (Add at beginning):</p>";
+
+        for (var i = 0; i < courses.length; i++) {
+            output.innerHTML += "<p>" + courses[i] + "</p>";
+        }
+
+        var student = {
+            name: "MD Hozrat Ali Naeem",
+            id: "23-54595-3",
+            department: "CSE",
+            cgpa: 3.75
+        };
+
+        output.innerHTML += "<h2>Student Object</h2>";
+        output.innerHTML += "<p>Name: " + student.name + "</p>";
+        output.innerHTML += "<p>ID: " + student.id + "</p>";
+        output.innerHTML += "<p>Department: " + student.department + "</p>";
+        output.innerHTML += "<p>CGPA: " + student.cgpa + "</p>";
+
+        var students = [
+            { name: "Naeem", id: "001", department: "CSE", cgpa: 3.80 },
+            { name: "Rahim", id: "002", department: "EEE", cgpa: 3.50 },
+            { name: "Karim", id: "003", department: "BBA", cgpa: 3.60 }
+        ];
+
+        output.innerHTML += "<h2>Array of Student Objects</h2>";
+
+        for (var i = 0; i < students.length; i++) {
+            output.innerHTML += 
+                "<p><strong>Student " + (i+1) + "</strong><br>" +
+                "Name: " + students[i].name + "<br>" +
+                "ID: " + students[i].id + "<br>" +
+                "Department: " + students[i].department + "<br>" +
+                "CGPA: " + students[i].cgpa + "</p>";
+        }
+
+    </script>
+
+</body>
+</html>

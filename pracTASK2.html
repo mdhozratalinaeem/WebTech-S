@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Task - Functions and Loops</title>
+</head>
+<body>
+
+    <h1>JavaScript Functions and Loops</h1>
+    <div id="output"></div>
+
+    <script>
+        function calculateSum(a, b) {
+            return a + b;
+        }
+
+        var result = calculateSum(10, 20);
+
+        document.getElementById("output").innerHTML += 
+            "<h2>Function Result</h2>" +
+            "<p>Sum of 10 and 20 is: " + result + "</p>";
+
+        document.getElementById("output").innerHTML += "<h2>For Loop (1 to 10)</h2>";
+
+        for (var i = 1; i <= 10; i++) {
+            document.getElementById("output").innerHTML += i + " ";
+        }
+
+
+        document.getElementById("output").innerHTML += "<h2>While Loop (Even numbers 1 to 20)</h2>";
+
+        var num = 2;
+
+        while (num <= 20) {
+            document.getElementById("output").innerHTML += num + " ";
+            num += 2;
+        }
+
+        var fullName = "MD Hozrat Ali Naeem";
+
+        var upperCaseName = fullName.toUpperCase();
+        var nameLength = fullName.length;
+        var firstName = fullName.split(" ")[0];
+
+        document.getElementById("output").innerHTML += 
+            "<h2>String Operations</h2>" +
+            "<p>Full Name: " + fullName + "</p>" +
+            "<p>Uppercase: " + upperCaseName + "</p>" +
+            "<p>Length: " + nameLength + "</p>" +
+            "<p>First Name: " + firstName + "</p>";
+
+        function checkStringLength() {
+            var userInput = prompt("Enter a string:");
+
+            if (userInput.length > 5) {
+                document.getElementById("output").innerHTML += 
+                    "<h2>User Input Check</h2>" +
+                    "<p>String length is greater than 5.</p>";
+            } else {
+                document.getElementById("output").innerHTML += 
+                    "<h2>User Input Check</h2>" +
+                    "<p>String length is 5 or less.</p>";
+            }
+        }
+
+        checkStringLength();
+
+    </script>
+
+</body>
+</html>
