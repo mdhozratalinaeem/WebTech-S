@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Student List</title>
+<link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+
+<h1>Student List</h1>
+
+<form id="student-form">
+
+<input type="text" id="roll-no" placeholder="Roll No">
+
+<input type="text" id="student-name" placeholder="Student Name">
+
+<button type="submit" id="add-btn" disabled>Add Student</button>
+
+</form>
+
+<input type="text" id="search-box" placeholder="Search student">
+
+<ul id="student-list"></ul>
+
+<p id="total-count">Total students: 0</p>
+
+<p id="attendance">Present: 0 | Absent: 0</p>
+
+<button id="sort-btn">Sort A-Z</button>
+
+<button id="highlight-first">Highlight First Student</button>
+
+<script src="dom.js"></script>
+
+</body>
+</html>
