@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Management System</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:40px;
+}
+
+table{
+    border-collapse: collapse;
+    margin-top:20px;
+    width:300px;
+}
+
+th,td{
+    border:1px solid black;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background-color:#dddddd;
+}
+</style>
+
+<script>
+
+function addParticipant(){
+
+    let name=document.getElementById("name").value;
+    let age=document.getElementById("age").value;
+
+    let namePattern=/^[A-Za-z]+$/;
+
+    if(name=="" || !namePattern.test(name)){
+        alert("Name must contain only alphabetical characters and cannot be empty.");
+        return;
+    }
+    age=Number(age);
+
+    if(isNaN(age) || age<18 || age>100){
+        alert("Age must be a number between 18 and 100.");
+        return;
+    }
+
+    let table=document.getElementById("participantTable");
+
+    let row=table.insertRow(-1);
+
+    let nameCell=row.insertCell(0);
+    let ageCell=row.insertCell(1);
+
+    nameCell.innerHTML=name;
+    ageCell.innerHTML=age;
+
+    if(age<30){
+        row.style.backgroundColor="lightblue";
+    }else{
+        row.style.backgroundColor="lightyellow";
+    }
+
+    document.getElementById("name").value="";
+    document.getElementById("age").value="";
+}
+
+</script>
+</head>
+
+<body>
+
+<h2>Event Participant Registration</h2>
+
+<label>Participant Name:</label>
+<input type="text" id="name">
+
+<br><br>
+
+<label>Participant Age:</label>
+<input type="number" id="age">
+
+<br><br>
+
+<button onclick="addParticipant()">Submit</button>
+
+<table id="participantTable">
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+</table>
+
+</body>
+</html>
+```
