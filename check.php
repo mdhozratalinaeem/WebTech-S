@@ -8,7 +8,7 @@ if($username=="RoGuE" && $password=="password")
 {
     $_SESSION['user'] = $username;
     header("Location: dashboard.php");
-    exit();
+    exit(); 
 }
 else
 {
