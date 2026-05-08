@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Student Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #output {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .student-card {
+            background: #e9f3ff;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Student Information System</h2>
+
+    <button onclick="loadStudents()">
+        Fetch Student Information
+    </button>
+
+    <div id="output"></div>
+</div>
+
+<script>
+function loadStudents() {
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "students.php", true);
+
+    xhr.onload = function () {
+
+        if (xhr.status == 200) {
+
+            var students = JSON.parse(xhr.responseText);
+
+            var output = "";
+
+            for (var i = 0; i < students.length; i++) {
+
+                output += `
+                    <div class="student-card">
+                        <p><strong>Name:</strong> ${students[i].name}</p>
+                        <p><strong>ID:</strong> ${students[i].id}</p>
+                        <p><strong>Department:</strong> ${students[i].department}</p>
+                        <p><strong>CGPA:</strong> ${students[i].cgpa}</p>
+                    </div>
+                `;
+            }
+
+            document.getElementById("output").innerHTML = output;
+        }
+    };
+
+    xhr.send();
+}
+</script>
+
+</body>
+</html>
